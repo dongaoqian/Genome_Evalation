@@ -1,5 +1,6 @@
 # Genome_Evalation
-usage: 
-sh switch_error.sh ZZ.ul.fastq.gz ZZ01v2_20240820.fasta 20
+Usage: 
 
-sh CollapseError.sh ref.fasta sorted.bam
+cd SwitchError && sh switch_error.sh <ont_ul.fq.gz> <ref.fa> <thread>
+
+cd CollapseError && sh CollapseError.sh <ref.fasta> <sorted.bam>
