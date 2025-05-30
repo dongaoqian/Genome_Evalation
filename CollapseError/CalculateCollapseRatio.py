@@ -17,3 +17,13 @@ total_difference_all = (df['End'] - df['Start']).sum()
 total_difference_filtered = (filtered_df['End'] - filtered_df['Start']).sum()
 
 print("CollapseRatio:",total_difference_filtered/total_difference_all)
+
+#Output collapse regions#
+
+base_name = os.path.splitext(file_path)[0]
+
+output_filename = f"{base_name}.collapse.bed" 
+
+filtered_df.to_csv(output_filename, sep='\t', index=False, header=False, columns=['Chr', 'Start', 'End', 'Value'])
+
+
