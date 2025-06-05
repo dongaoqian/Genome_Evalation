@@ -2,6 +2,7 @@
 
 import pandas as pd
 import sys
+import os
 
 file_path = sys.argv[1]
 df = pd.read_csv(file_path, sep='\t', header=None, names=['Chr', 'Start', 'End', 'Value'])
